@@ -1,11 +1,20 @@
-# mental-health-score
+##Mental Health Score Predictor
 
+Predict a student's mental health score from their social media habits and daily routine.
 
-Author-Subhranshu sekhar satapathy
+Author: Subhranshu Sekhar Satapathy
 
-This is a project made by using scikit-learn,ml,fastapi,html,css,js
+Overview
 
+This project trains a machine learning model on the Student Social Media and Mental Health Impact dataset. It serves predictions through a FastAPI backend and a simple web frontend.
 
-The model used here is Randomforest-regressor
-The best parameters are obtained by randomserachcv
-The r2 score of this model is ~86.5%
+Model: Random Forest Regressor (scikit-learn)
+Tuning: hyperparameters selected with RandomizedSearchCV
+Performance: R² score of about 86.5%
+Backend: FastAPI
+Frontend: HTML, CSS and JavaScript
+Tech Stack
+Area	Tools
+Machine learning	Python, pandas, scikit-learn, joblib
+Backend	FastAPI, Pydantic, Uvicorn
+Frontend	HTML, CSS, JavaScript
