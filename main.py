@@ -6,10 +6,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel,Field
 
 
-
+from fastapi.staticfiles import StaticFiles
 model=joblib.load('rf_mental_score_new.pkl')
 app = FastAPI()
-
+app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -54,9 +54,6 @@ class PredictionResponse(BaseModel):
 
 
 
-@app.get("/")
-def home():
-    return{"message":"welcome to my website"}
 
 
 @app.post("/predict",response_model=PredictionResponse)
