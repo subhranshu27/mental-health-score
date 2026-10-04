@@ -1,5 +1,5 @@
 // Change this if your FastAPI server runs elsewhere
-const API_URL = "https://mental-health-score-r8sh.onrender.com/";
+const API_URL = "";
 
 // Assumed score range: 0–10, where higher means better mental health
 const MAX_SCORE = 10;
