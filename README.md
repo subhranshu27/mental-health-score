@@ -1,4 +1,8 @@
 # mental-health-score
+
+
+Author-Subhranshu sekhar satapathy
+
 This is a project made by using scikit-learn,ml,fastapi,html,css,js
 
 
