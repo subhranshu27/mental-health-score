@@ -9,7 +9,7 @@ from pydantic import BaseModel,Field
 from fastapi.staticfiles import StaticFiles
 model=joblib.load('rf_mental_score_new.pkl')
 app = FastAPI()
-app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -78,6 +78,5 @@ def post(data:student):
 
    prediction=model.predict(input_row)[0]
    return PredictionResponse(predicted_mental_health_score=round(float(prediction),2))
-
-
+app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
 
